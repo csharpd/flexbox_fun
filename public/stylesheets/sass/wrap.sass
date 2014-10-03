@@ -1,0 +1,46 @@
+@mixin flexbox()
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+
+
+@mixin flex($values)
+  -webkit-box-flex: $values
+  -moz-box-flex:  $values
+  -webkit-flex:  $values
+  -ms-flex:  $values
+  flex:  $values
+
+
+@mixin order($val)
+  -webkit-box-ordinal-group: $val + 1
+  -moz-box-ordinal-group: $val + 1
+  -ms-flex-order: $val
+  -webkit-order: $val
+  order: $val
+
+.flex-container
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: flex-start
+
+.flex-item
+  background: tomato
+  padding: 5px
+  margin: 10px
+  width: 200px
+  height: 150px
+  margin-top: 10px
+  line-height: 150px
+  color: white
+  font-weight: bold
+  font-size: 3em
+  text-align: center
+
