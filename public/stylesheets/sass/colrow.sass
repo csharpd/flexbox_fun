@@ -1,0 +1,74 @@
+@mixin flexbox()
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+
+@mixin order($val)
+  -webkit-box-ordinal-group: $val + 1
+  -moz-box-ordinal-group: $val + 1
+  -ms-flex-order: $val
+  -webkit-order: $val
+  order: $val
+
+@mixin flex($values)
+  -webkit-box-flex: $values
+  -moz-box-flex:  $values
+  -webkit-flex:  $values
+  -ms-flex:  $values
+  flex:  $values
+
+.container
+  background: black
+  @include flexbox()
+
+  main
+    @include order(2)
+    @include flexbox()
+    background: gold
+    flex-basis: 70%
+    flex-wrap: wrap
+    justify-content: space-around
+    .row
+      background: tomato
+      padding: 5px
+      margin: 10px
+      height: 150px
+      margin-top: 10px
+      line-height: 150px
+      color: white
+      font-weight: bold
+      font-size: 3em
+      text-align: center
+      width: 200px
+
+
+
+
+
+  aside
+    @include order(1)
+    @include flexbox()
+    background: deepskyblue
+    flex-basis: 30%
+    -webkit-flex-flow: column wrap
+    flex-flow: column wrap
+    align-items: center
+    min-width: 260px
+    .col
+      background: hotpink
+      padding: 5px
+      margin: 10px
+      margin-top: 10px
+      color: white
+      font-weight: bold
+      line-height: 150px
+      font-size: 3em
+      text-align: center
+      justify-content: center
+      width: 200px
+
+
+
+
