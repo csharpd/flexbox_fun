@@ -9,3 +9,14 @@ get '/wrap' do
   haml :wrap
 end
 
+get '/nav' do
+  haml :nav
+end
+
+get '/aside' do
+  haml :aside
+end
+
+get '/twitter' do
+  haml :twitter
+end
