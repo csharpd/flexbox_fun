@@ -20,3 +20,7 @@ end
 get '/twitter' do
   haml :twitter
 end
+
+get '/colrow' do
+  haml :colrow
+end
