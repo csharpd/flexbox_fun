@@ -6,28 +6,32 @@
 		%link{:href => "/stylesheets/reset.css", :rel => "stylesheet"}/
 		%link{:href => "http://fonts.googleapis.com/css?family=Special+Elite", :rel => "stylesheet", :type => "text/css"}/
 		%body
-			%main Progress Report.
+			%section#progress
+				%h1 Progress Report.
 			%section.board
 				%section.phase
-					%h2 Pending
+					%h1 Pending
 					%section.kanbans
-						%section.todo
-							%section.name Pickles
-							%section.description Eat em!
-							%section.duedate 14/05/14
-						%section.todo
-							%section.name Pickles
-							%section.description Eat em!
-							%section.duedate 14/05/14
+						%article.todo
+							%header
+								%h1
+									Pickles
+									%time 14/05/14
+							%p Eat em!
 				%section.phase
-					%h2 Doing
+					%h1 Doing
 					%section.kanbans
-						%section.todo Pickles
-						%section.todo Pickles
-						%section.todo Pickles
 				%section.phase
-					%h2 Done
+					%h1 Done
 					%section.kanbans
-						%section.todo Pickles
-						%section.todo Pickles
-						%section.todo Pickles
+				%section.phase#addtask
+					%h1 Add a task
+					%section.kanbans
+						%form
+							%input{name: 'title', placeholder: 'Add a title'}
+							%textarea{name: 'description', placeholder: "Add a description"}
+							%input{name: 'dueDate', placeholder: 'Due date (dd/mm/yyyy)'}
+							%input#addtodo{:type => "button", :value => "Add Task", :name => "submit"}/
+						%input#clear-data{:type => "button", :value => "Clear data", :name => "clear"}
+						%section.delete
+							Drag here to delete

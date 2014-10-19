@@ -1,44 +1,71 @@
-@mixin flexbox()
+@mixin flexbox
 	display: -webkit-box
 	display: -moz-box
 	display: -ms-flexbox
 	display: -webkit-flex
 	display: flex
 
+@mixin box
+	border: .2em solid rgba(0,0,0,1)
+	border-radius: .3em
+
 body
 	text-align: center
+	background-color: rgba(236,231,210,1)
 
-main
-	font-family: 'Special Elite', cursive
-	font-size: 4rem
-	margin: 3% 0
-
-h2
-	margin: 4%
+#progress
+	h1
+		border-bottom: 1px solid
+		font-family: 'Special Elite', cursive
+		font-size: 4rem
+		margin: 4%
+		margin-bottom: 2%
+		padding-bottom: 1%
 
 .board
-	background: hotpink
-	@include flexbox()
+	@include flexbox
 
 .phase
+	@include box
+	@include flexbox
 	font-family: 'Special Elite', cursive
-	background: blue
-	width: 30%
+	width: 20%
 	margin: 0 3%
-	border: 1px solid #666
-	border-radius: 3px
-	@include flexbox()
 	-webkit-flex-flow: column
 	flex-flow: column
+	h1
+		margin: 4%
+		font-size: 2rem
+		border-bottom: 1px solid
 
 .kanbans
-	background: yellow
 	margin: 0 5% 5%
-	border-radius: 3px
 
 .todo
 	text-align: left
-	background: green
 	margin: 0 0 5% 0
-	border: 1px solid #666
-	border-radius: 3px
+	padding-top: .2em
+	padding-bottom: .2em
+	@include box
+	border: 0
+	background-color: #FCFCD9
+	h1
+		@include flexbox
+		justify-content: space-between
+		font-size: 1.4em
+		border-bottom: .1em dotted rgba(247,68,19,.4)
+		time
+			font-size: .4em
+			color: red
+	p
+		margin-left: 5%
+
+#addtask
+	text-align: left
+
+.delete
+	background-color: #fff
+	border: 2px dotted #000
+	margin: 5%
+	text-align: center
+	line-height: 5em
