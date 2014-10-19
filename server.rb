@@ -24,3 +24,7 @@ end
 get '/colrow' do
   haml :colrow
 end
+
+get '/janban' do
+	haml :janban
+end

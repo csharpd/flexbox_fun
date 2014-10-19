@@ -1,0 +1,22 @@
+@mixin flexbox()
+	display: -webkit-box
+	display: -moz-box
+	display: -ms-flexbox
+	display: -webkit-flex
+	display: flex
+
+body
+	text-align: center
+
+.board
+	background: hotpink
+	@include flexbox()
+
+.phase
+	background: blue
+	width: 30%
+	margin: 0 3%
+
+
+.kanbans
+	background: yellow
