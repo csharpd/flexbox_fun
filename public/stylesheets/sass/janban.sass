@@ -8,15 +8,37 @@
 body
 	text-align: center
 
+main
+	font-family: 'Special Elite', cursive
+	font-size: 4rem
+	margin: 3% 0
+
+h2
+	margin: 4%
+
 .board
 	background: hotpink
 	@include flexbox()
 
 .phase
+	font-family: 'Special Elite', cursive
 	background: blue
 	width: 30%
 	margin: 0 3%
-
+	border: 1px solid #666
+	border-radius: 3px
+	@include flexbox()
+	-webkit-flex-flow: column
+	flex-flow: column
 
 .kanbans
 	background: yellow
+	margin: 0 5% 5%
+	border-radius: 3px
+
+.todo
+	text-align: left
+	background: green
+	margin: 0 0 5% 0
+	border: 1px solid #666
+	border-radius: 3px

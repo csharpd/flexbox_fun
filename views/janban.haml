@@ -4,17 +4,21 @@
 		%title Janban Board
 		%link{:href => "/stylesheets/janban.css", :rel => "stylesheet"}/
 		%link{:href => "/stylesheets/reset.css", :rel => "stylesheet"}/
+		%link{:href => "http://fonts.googleapis.com/css?family=Special+Elite", :rel => "stylesheet", :type => "text/css"}/
 		%body
-			%header
-				%h1 Progress Report.
+			%main Progress Report.
 			%section.board
-				Board
 				%section.phase
 					%h2 Pending
 					%section.kanbans
-						%section.todo Pickles
-						%section.todo Pickles
-						%section.todo Pickles
+						%section.todo
+							%section.name Pickles
+							%section.description Eat em!
+							%section.duedate 14/05/14
+						%section.todo
+							%section.name Pickles
+							%section.description Eat em!
+							%section.duedate 14/05/14
 				%section.phase
 					%h2 Doing
 					%section.kanbans
